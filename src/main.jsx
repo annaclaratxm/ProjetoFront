@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import LoginComponent from './components/Login/LoginComponent.jsx'
+import CrudUser from './components/CrudUsers/CreateUser.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <LoginComponent />
+    <CrudUser/>
   </React.StrictMode>,
 )
