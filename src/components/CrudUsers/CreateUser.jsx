@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FiTrash2 } from "react-icons/fi";
 import './CreateUser.css';
 
