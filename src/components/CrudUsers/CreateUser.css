@@ -1,0 +1,63 @@
+/* EDITAR
+
+.create-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #dfdddd;
+}
+
+.crud-user-table {
+    max-width: 800px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.18);
+}
+
+.crud-user-table h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.user-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.user-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-actions button:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 600px) {
+    .crud-user-table {
+        padding: 20px;
+    }
+
+    .user-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .user-actions button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+} */
