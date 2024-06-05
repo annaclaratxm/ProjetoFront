@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { FiTrash2 } from "react-icons/fi";
+import './CreateUser.css';
 
 export default function CreateUser() {
   const [usuarios, setUsuarios] = useState([]);
@@ -21,10 +23,12 @@ export default function CreateUser() {
     console.log("Editar usuário com ID:", id);
   };
 
-  const excluirUsuario = (id) => {
-    const novosUsuarios = usuarios.filter(usuario => usuario.id !== id);
-    setUsuarios(novosUsuarios);
-    console.log("Usuário com ID", id, "foi excluído.");
+  const confirmarExclusao = (id) => {
+    if (window.confirm("Tem certeza que deseja excluir este usuário?")) {
+      const novosUsuarios = usuarios.filter((usuario) => usuario.id !== id);
+      setUsuarios(novosUsuarios);
+      console.log("Usuário com ID", id, "foi excluído.");
+    }
   };
 
   const classe = {
@@ -55,8 +59,8 @@ export default function CreateUser() {
                 <button onClick={() => editarUsuario(usuario.id)}>
                   Editar
                 </button>
-                <button onClick={() => excluirUsuario(usuario.id)}>
-                  Excluir
+                <button onClick={() => confirmarExclusao(usuario.id)}>
+                  <FiTrash2 />
                 </button>
               </td>
             </tr>
