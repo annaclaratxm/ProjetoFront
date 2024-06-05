@@ -6,5 +6,43 @@
       "stock": "30",
       "id": "630f"
     }
+  ],
+  
+  "users": [
+    {
+      "id": 1,
+      "username": "ivete_sangalo",
+      "password": "1234",
+      "fullName": "Ivete Sangalo",
+      "email": "ivete@example.com"
+    },
+    {
+      "id": 2,
+      "username": "paula_fernandes",
+      "password": "1234",
+      "fullName": "Paula Fernandes",
+      "email": "paula@example.com"
+    },
+    {
+      "id": 3,
+      "username": "fatima_bernardes",
+      "password": "1234",
+      "fullName": "Fátima Bernardes",
+      "email": "fatima@example.com"
+    },
+    {
+      "id": 4,
+      "username": "roberto_carlos",
+      "password": "1234",
+      "fullName": "Roberto Carlos",
+      "email": "roberto@example.com"
+    },
+    {
+      "id": 5,
+      "username": "carlos_alberto",
+      "password": "1234",
+      "fullName": "Carlos Alberto",
+      "email": "carlos@example.com"
+    }
   ]
 }

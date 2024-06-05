@@ -1,56 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function CreateUser() {
-  const [usuarios, setUsuarios] = useState([
-    {
-      id: 1,
-      username: "ivete_sangalo",
-      password: "1234",
-      fullName: "Ivete Sangalo",
-      email: "ivete@example.com",
-    },
-    {
-      id: 2,
-      username: "paula_fernandes",
-      password: "1234",
-      fullName: "Paula Fernandes",
-      email: "paula@example.com",
-    },
-    {
-      id: 3,
-      username: "fatima_bernardes",
-      password: "1234",
-      fullName: "Fátima Bernardes",
-      email: "fatima@example.com",
-    },
-    {
-      id: 4,
-      username: "roberto_carlos",
-      password: "1234",
-      fullName: "Roberto Carlos",
-      email: "roberto@example.com",
-    },
-    {
-      id: 5,
-      username: "carlos_alberto",
-      password: "1234",
-      fullName: "Carlos Alberto",
-      email: "carlos@example.com",
-    },
-  ]);
+  const [usuarios, setUsuarios] = useState([]);
+
+  useEffect(() => {
+    const fetchUsuarios = async () => {
+      try {
+        const response = await fetch("../../../data/db.json");
+        const data = await response.json();
+        setUsuarios(data.users);
+      } catch (error) {
+        console.error("Erro ao buscar usuários:", error);
+      }
+    };
+
+    fetchUsuarios();
+  }, []);
 
   const editarUsuario = (id) => {
     console.log("Editar usuário com ID:", id);
   };
 
   const excluirUsuario = (id) => {
-    console.log("Excluir usuário com ID:", id);
+    const novosUsuarios = usuarios.filter(usuario => usuario.id !== id);
+    setUsuarios(novosUsuarios);
+    console.log("Usuário com ID", id, "foi excluído.");
   };
 
   const classe = {
     CreateUser: "create-user",
     TabelaCrudUser: "crud-user-table",
-    actions: "user-actions"
+    actions: "user-actions",
   };
 
   return (
@@ -72,8 +52,12 @@ export default function CreateUser() {
               <td>{usuario.fullName}</td>
               <td>{usuario.email}</td>
               <td className={classe.actions}>
-                <button onClick={() => editarUsuario(usuario.id)}>Editar</button>
-                <button onClick={() => excluirUsuario(usuario.id)}>Excluir</button>
+                <button onClick={() => editarUsuario(usuario.id)}>
+                  Editar
+                </button>
+                <button onClick={() => excluirUsuario(usuario.id)}>
+                  Excluir
+                </button>
               </td>
             </tr>
           ))}
