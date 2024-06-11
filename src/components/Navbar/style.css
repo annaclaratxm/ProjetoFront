@@ -3,7 +3,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-
+    background-color: #C9C5BB;
+    z-index: 1000;
     
 }
 
@@ -15,12 +16,20 @@
 }
 
 .navbar-items {
-    cursor: pointer;
-    color: #00000080;
     padding: 0px 5px;
     font-size: 16px;
 }
 
 .navbar-items:hover {
+    color: #000000;
+}
+
+a {
+    text-decoration: none;
+    color: #00000080;
+    cursor: pointer;
+}
+
+a:hover {
     color: #000000;
 }
