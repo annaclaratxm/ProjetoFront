@@ -1,0 +1,105 @@
+.create-user {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+  }
+  
+  .crud-user-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+  }
+  
+  .crud-user-table th,
+  .crud-user-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .crud-user-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .crud-user-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .crud-user-table tbody tr:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .user-actions button {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-actions button:hover {
+    background-color: #45a049;
+  }
+  
+  .user-actions button:last-child {
+    background-color: #f44336;
+  }
+  
+  .user-actions button:last-child:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Estilo do ícone de lixeira */
+  .user-actions button:last-child svg {
+    vertical-align: middle;
+  }
+  
+  /* Estilo do diálogo de confirmação */
+  .confirmation-dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .confirmation-dialog h3 {
+    margin-top: 0;
+  }
+  
+  .confirmation-dialog p {
+    margin-bottom: 20px;
+  }
+  
+  .confirmation-dialog button {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+  
+  .confirmation-dialog button:hover {
+    background-color: #45a049;
+  }
+  
+  .confirmation-dialog button:last-child {
+    background-color: #f44336;
+  }
+  
+  .confirmation-dialog button:last-child:hover {
+    background-color: #d32f2f;
+  }
+  

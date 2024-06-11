@@ -1,13 +1,53 @@
 {
   "products": [
     {
-      "name": "Uva",
-      "price": "15",
-      "stock": "30",
-      "id": "630f"
+      "id": "1",
+      "name": "God Of War - Ragnarok",
+      "platform": "PS5 e PS4",
+      "price": "289,99",
+      "stock": "60",
+      "photo": ""
+    },
+    
+    {
+      "id": "2",
+      "name": "Spider-Man: Miles Morales",
+      "platform": "PS5",
+      "price": "249,99",
+      "stock": "89",
+      "photo": ""
+    },
+  
+    {
+      "id": "3",
+      "name": "Dragon Age: DreadWolf",
+      "platform": "PS5",
+      "price": "299,99",
+      "stock": "80",
+      "photo": ""
+    },
+  
+    {
+      "id": "4",
+      "name": "Bloodborne",
+      "platform": "PS5",
+      "price": "179,99",
+      "stock": "78",
+      "photo": ""
+    },
+  
+    {
+      "id": "5",
+      "name": "PERSONA 5 ROYAL",
+      "platform": "PS5 e PS4",
+      "price": "189,99",
+      "stock": "60",
+      "photo": ""
     }
   ],
   
+
+
   "users": [
     {
       "id": 1,
