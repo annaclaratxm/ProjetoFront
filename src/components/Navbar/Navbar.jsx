@@ -6,10 +6,10 @@ export default function Navbar() {
         <>
         <div className="container-navbar">
             <span className="navbar-text">Navbar</span>
-            <span className="navbar-items">Início</span>
-            <span className="navbar-items">Usuários</span>
-            <span className="navbar-items">Serviços</span>
+            <span className="navbar-items"><Link to={'/app/home'}>Início</Link></span>
+            <span className="navbar-items"><Link to={'/app/users'}>Usuários</Link></span>
+            <span className="navbar-items"><Link to={'/app/services'}>Serviços</Link></span>
         </div>
         </>
-    )
+    )   
 }
