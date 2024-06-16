@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './LoginComponent.css';
 
 export default function LoginComponent() {
@@ -9,6 +10,7 @@ export default function LoginComponent() {
   const [showModal, setShowModal] = useState(false);
   const [usernameError, setUsernameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
+  const navigate = useNavigate(); // Use navigate hook to redirect
 
   useEffect(() => {
     const fetchUsuarios = async () => {
@@ -20,38 +22,34 @@ export default function LoginComponent() {
         console.error("Erro ao buscar usuários:", error);
       }
     };
-
     fetchUsuarios();
   }, []);
 
   const handleLogin = (event) => {
     event.preventDefault();
     let valid = true;
-
     if (!username) {
       setUsernameError(true);
       valid = false;
     } else {
       setUsernameError(false);
     }
-
     if (!password) {
       setPasswordError(true);
       valid = false;
     } else {
       setPasswordError(false);
     }
-
     if (!valid) {
       return;
     }
-
     const user = usuarios.find(u => u.username === username);
     if (user) {
       if (user.password === password) {
         console.log("Usuário logado com sucesso: ", user);
         setErrorMessage('Usuário logado com sucesso.');
         setShowModal(true);
+        navigate('/app/home'); // Redirect to /app/home on successful login
       } else {
         setErrorMessage('Senha incorreta.');
         setShowModal(true);
