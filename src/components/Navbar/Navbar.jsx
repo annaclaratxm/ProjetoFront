@@ -11,5 +11,5 @@ export default function Navbar() {
             <span className="navbar-items"><Link to={'/app/services'}>Serviços</Link></span>
         </div>
         </>
-    )   
+    )
 }

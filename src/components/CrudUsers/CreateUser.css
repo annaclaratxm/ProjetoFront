@@ -55,12 +55,10 @@
     background-color: #d32f2f;
   }
   
-  /* Estilo do ícone de lixeira */
   .user-actions button:last-child svg {
     vertical-align: middle;
   }
   
-  /* Estilo do diálogo de confirmação */
   .confirmation-dialog {
     display: none;
     position: fixed;
