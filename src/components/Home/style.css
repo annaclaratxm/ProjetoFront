@@ -1,0 +1,8 @@
+.home-div {
+    box-sizing: border-box;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    padding-top: 280px;
+    max-width: 600px;
+}
