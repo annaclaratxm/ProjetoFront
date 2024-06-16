@@ -1,4 +1,4 @@
-.create-user {
+.create-service {
     font-family: Arial, sans-serif;
     max-width: 800px;
     margin: 0 auto;
@@ -6,33 +6,33 @@
     padding: 20px;
   }
   
-  .crud-user-table {
+  .crud-service-table {
     width: 100%;
     border-collapse: collapse;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow-x: auto;
   }
   
-  .crud-user-table th,
-  .crud-user-table td {
+  .crud-service-table th,
+  .crud-service-table td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
   }
   
-  .crud-user-table th {
+  .crud-service-table th {
     background-color: #f2f2f2;
   }
   
-  .crud-user-table tbody tr:nth-child(even) {
+  .crud-service-table tbody tr:nth-child(even) {
     background-color: #f9f9f9;
   }
   
-  .crud-user-table tbody tr:hover {
+  .crud-service-table tbody tr:hover {
     background-color: #f0f0f0;
   }
   
-  .user-actions button {
+  .service-actions button {
     background-color: #4caf50;
     color: white;
     padding: 8px 12px;
@@ -43,20 +43,20 @@
     transition: background-color 0.3s ease;
   }
   
-  .user-actions button:hover {
+  .service-actions button:hover {
     background-color: #45a049;
   }
   
-  .user-actions button:last-child {
+  .service-actions button:last-child {
     background-color: #f44336;
   }
   
-  .user-actions button:last-child:hover {
+  .service-actions button:last-child:hover {
     background-color: #d32f2f;
   }
   
   /* Estilo do ícone de lixeira */
-  .user-actions button:last-child svg {
+  .service-actions button:last-child svg {
     vertical-align: middle;
   }
   
@@ -101,5 +101,14 @@
   
   .confirmation-dialog button:last-child:hover {
     background-color: #d32f2f;
+  }
+
+  img {
+    max-width: 100px;
+  }
+
+  .product-image:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
   }
   

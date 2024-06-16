@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FiTrash2 } from "react-icons/fi";
+import * as Dialog from '@radix-ui/react-dialog';
 import './CreateServices.css';
+import './ModalPhoto.css';
 
 export default function ProductList() {
   const [products, setProducts] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState({ photo: "", name: "" });
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("../../../data/products.json");
+        const response = await fetch("../../../data/db.json");
         const data = await response.json();
         setProducts(data.products);
       } catch (error) {
@@ -31,10 +34,18 @@ export default function ProductList() {
     }
   };
 
+  const abrirModal = (photo, name) => {
+    setSelectedProduct({ photo, name });
+  }
+
+  const fecharModal = () => {
+    setSelectedProduct({ photo: "", name: "" });
+  }
+
   const classe = {
-    ProductList: "product-list",
-    TabelaCrudProduct: "crud-product-table",
-    actions: "product-actions",
+    ProductList: "create-service",
+    TabelaCrudProduct: "crud-service-table",
+    actions: "service-actions",
   };
 
   return (
@@ -47,6 +58,7 @@ export default function ProductList() {
             <th>Modelo/Plataforma</th>
             <th>Preço</th>
             <th>Estoque</th>
+            <th>Foto</th>
             <th>Ações</th>
           </tr>
         </thead>
@@ -57,6 +69,7 @@ export default function ProductList() {
               <td>{product.platform}</td>
               <td>{product.price}</td>
               <td>{product.stock}</td>
+              <td><img src={product.photo} alt={product.name} onClick={() => abrirModal(product.photo, product.name)} style={{ cursor: 'pointer' }} className="product-image" /></td>
               <td className={classe.actions}>
                 <button onClick={() => editarProduto(product.id)}>
                   Editar
@@ -69,6 +82,17 @@ export default function ProductList() {
           ))}
         </tbody>
       </table>
+      <Dialog.Root open={!!selectedProduct.photo} onOpenChange={fecharModal}>
+        <Dialog.Overlay className="modal-overlay">
+          <Dialog.Content className="modal-content">
+            <Dialog.Close className="modal-close">
+              x
+            </Dialog.Close>
+            <h2>{selectedProduct.name}</h2>
+            <img src={selectedProduct.photo} alt={selectedProduct.name} />
+          </Dialog.Content>
+        </Dialog.Overlay>
+      </Dialog.Root>
     </div>
   );
 }

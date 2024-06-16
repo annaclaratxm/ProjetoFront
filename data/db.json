@@ -6,7 +6,7 @@
       "platform": "PS5 e PS4",
       "price": "289,99",
       "stock": "60",
-      "photo": ""
+      "photo": "https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/4xJ8XB3bi888QTLZYdl7Oi0s.png"
     },
     
     {
@@ -15,7 +15,7 @@
       "platform": "PS5",
       "price": "249,99",
       "stock": "89",
-      "photo": ""
+      "photo": "https://image.api.playstation.com/vulcan/ap/rnd/202008/1020/PRfYtTZQsuj3ALrBXGL8MjAH.jpg"
     },
   
     {
@@ -24,7 +24,7 @@
       "platform": "PS5",
       "price": "299,99",
       "stock": "80",
-      "photo": ""
+      "photo": "https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2024/05/13/dragon-age-dreadwolf-1-vbhenl1rn78h.jpg"
     },
   
     {
@@ -33,16 +33,16 @@
       "platform": "PS5",
       "price": "179,99",
       "stock": "78",
-      "photo": ""
+      "photo": "https://image.api.playstation.com/vulcan/img/rnd/202010/2614/Sy5e8DmeKIJVjlAGraPAJYkT.png"
     },
   
     {
       "id": "5",
-      "name": "PERSONA 5 ROYAL",
+      "name": "Persona 5 Royal",
       "platform": "PS5 e PS4",
       "price": "189,99",
       "stock": "60",
-      "photo": ""
+      "photo": "https://image.api.playstation.com/vulcan/ap/rnd/202209/0202/OjPcc6QP2W8kImOhWSnzojn3.png"
     }
   ],
   
