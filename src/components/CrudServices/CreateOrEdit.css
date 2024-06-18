@@ -1,0 +1,60 @@
+.create-service {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .create-service h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .create-service form {
+    display: grid;
+    grid-gap: 10px;
+  }
+  
+  .create-service label {
+    font-weight: bold;
+  }
+  
+  .create-service input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .create-service button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .create-service button[type="submit"] {
+    background-color: #28a745;
+    margin-right: 10px;
+  }
+  
+  .create-service button[type="button"] {
+    background-color: #dc3545;
+  }
+  
+  .create-service button[type="submit"]:hover,
+  .create-service button[type="button"]:hover {
+    opacity: 0.8;
+  }
+  
+  .create-service button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

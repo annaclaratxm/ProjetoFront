@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import LoginComponent from './components/Login/loginComponent.jsx';
 import Home from './components/Home/Home.jsx';
 import CreateServices from './components/CrudServices/CreateServices.jsx';
+import CreateOrEditProduct from './components/CrudServices/CreateOrEditServices.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,14 @@ const router = createBrowserRouter([
       {
         path: 'services',
         element: <CreateServices />,
+      },
+      {
+        path: 'services/create',
+        element: <CreateOrEditProduct />, // Create product
+      },
+      {
+        path: 'services/edit/:id',
+        element: <CreateOrEditProduct />, // Edit product
       }
     ],
   },

@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { FiTrash2 } from "react-icons/fi";
 import * as Dialog from '@radix-ui/react-dialog';
+import { useNavigate } from 'react-router-dom';
 import './CreateServices.css';
 import './ModalPhoto.css';
 
 export default function ProductList() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState({ photo: "", name: "" });
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -22,10 +24,6 @@ export default function ProductList() {
     fetchProducts();
   }, []);
 
-  const editarProduto = (id) => {
-    console.log("Editar produto com ID:", id);
-  };
-
   const confirmarExclusao = (id) => {
     if (window.confirm("Tem certeza que deseja excluir este produto?")) {
       const novosProdutos = products.filter((product) => product.id !== id);
@@ -36,21 +34,31 @@ export default function ProductList() {
 
   const abrirModal = (photo, name) => {
     setSelectedProduct({ photo, name });
-  }
+  };
 
   const fecharModal = () => {
     setSelectedProduct({ photo: "", name: "" });
-  }
+  };
+
+  const handleCreateProduct = () => {
+    navigate('/app/services/create');
+  };
+
+  const handleEditProduct = (id) => {
+    navigate(`/app/services/edit/${id}`);
+  };
 
   const classe = {
     ProductList: "create-service",
     TabelaCrudProduct: "crud-service-table",
     actions: "service-actions",
+    createButton: "create-button"
   };
 
   return (
     <div className={classe.ProductList}>
       <h2>Lista de Produtos</h2>
+      <button className={classe.createButton} onClick={handleCreateProduct}>Criar Novo Serviço</button>
       <table className={classe.TabelaCrudProduct}>
         <thead>
           <tr>
@@ -71,7 +79,7 @@ export default function ProductList() {
               <td>{product.stock}</td>
               <td><img src={product.photo} alt={product.name} onClick={() => abrirModal(product.photo, product.name)} style={{ cursor: 'pointer' }} className="product-image" /></td>
               <td className={classe.actions}>
-                <button onClick={() => editarProduto(product.id)}>
+                <button onClick={() => handleEditProduct(product.id)}>
                   Editar
                 </button>
                 <button onClick={() => confirmarExclusao(product.id)}>
