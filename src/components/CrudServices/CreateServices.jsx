@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
 import { FiTrash2 } from "react-icons/fi";
 import * as Dialog from '@radix-ui/react-dialog';
+import { useNavigate } from 'react-router-dom';
 import './CreateServices.css';
 import './ModalPhoto.css';
 
 export default function ProductList() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState({ photo: "", name: "" });
-  const [isCreating, setIsCreating] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
-  const [currentProduct, setCurrentProduct] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -24,12 +23,6 @@ export default function ProductList() {
 
     fetchProducts();
   }, []);
-
-  const editarProduto = (product) => {
-    setCurrentProduct(product);
-    setIsEditing(true);
-    setIsCreating(true);
-  };
 
   const confirmarExclusao = (id) => {
     if (window.confirm("Tem certeza que deseja excluir este produto?")) {
@@ -48,22 +41,11 @@ export default function ProductList() {
   };
 
   const handleCreateProduct = () => {
-    setIsCreating(true);
-    setIsEditing(false);
-    setCurrentProduct(null);
+    navigate('/app/services/create');
   };
 
-  const handleSaveProduct = (newProduct) => {
-    if (isEditing) {
-      const updatedProducts = products.map((product) => 
-        product.id === currentProduct.id ? { ...product, ...newProduct } : product
-      );
-      setProducts(updatedProducts);
-    } else {
-      setProducts([...products, { ...newProduct, id: products.length + 1 }]);
-    }
-    setIsCreating(false);
-    setIsEditing(false);
+  const handleEditProduct = (id) => {
+    navigate(`/app/services/edit/${id}`);
   };
 
   const classe = {
@@ -77,30 +59,6 @@ export default function ProductList() {
     <div className={classe.ProductList}>
       <h2>Lista de Produtos</h2>
       <button className={classe.createButton} onClick={handleCreateProduct}>Criar Novo Serviço</button>
-      {isCreating && (
-        <div className="create-form">
-          <h3>{isEditing ? 'Editar Produto' : 'Criar Novo Produto'}</h3>
-          <form onSubmit={(e) => {
-            e.preventDefault();
-            const formData = new FormData(e.target);
-            const newProduct = Object.fromEntries(formData);
-            handleSaveProduct(newProduct);
-          }}>
-            <label>Nome:</label>
-            <input name="name" type="text" defaultValue={currentProduct ? currentProduct.name : ''} required />
-            <label>Modelo/Plataforma:</label>
-            <input name="platform" type="text" defaultValue={currentProduct ? currentProduct.platform : ''} required />
-            <label>Preço:</label>
-            <input name="price" type="text" defaultValue={currentProduct ? currentProduct.price : ''} required />
-            <label>Estoque:</label>
-            <input name="stock" type="text" defaultValue={currentProduct ? currentProduct.stock : ''} required />
-            <label>Foto URL:</label>
-            <input name="photo" type="text" defaultValue={currentProduct ? currentProduct.photo : ''} required />
-            <button type="submit">{isEditing ? 'Salvar Alterações' : 'Salvar'}</button>
-            <button type="button" onClick={() => setIsCreating(false)}>Cancelar</button>
-          </form>
-        </div>
-      )}
       <table className={classe.TabelaCrudProduct}>
         <thead>
           <tr>
@@ -121,7 +79,7 @@ export default function ProductList() {
               <td>{product.stock}</td>
               <td><img src={product.photo} alt={product.name} onClick={() => abrirModal(product.photo, product.name)} style={{ cursor: 'pointer' }} className="product-image" /></td>
               <td className={classe.actions}>
-                <button onClick={() => editarProduto(product)}>
+                <button onClick={() => handleEditProduct(product.id)}>
                   Editar
                 </button>
                 <button onClick={() => confirmarExclusao(product.id)}>

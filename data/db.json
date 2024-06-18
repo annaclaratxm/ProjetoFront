@@ -8,7 +8,6 @@
       "stock": "60",
       "photo": "https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/4xJ8XB3bi888QTLZYdl7Oi0s.png"
     },
-    
     {
       "id": "2",
       "name": "Spider-Man: Miles Morales",
@@ -17,7 +16,6 @@
       "stock": "89",
       "photo": "https://image.api.playstation.com/vulcan/ap/rnd/202008/1020/PRfYtTZQsuj3ALrBXGL8MjAH.jpg"
     },
-  
     {
       "id": "3",
       "name": "Dragon Age: DreadWolf",
@@ -26,7 +24,6 @@
       "stock": "80",
       "photo": "https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2024/05/13/dragon-age-dreadwolf-1-vbhenl1rn78h.jpg"
     },
-  
     {
       "id": "4",
       "name": "Bloodborne",
@@ -35,7 +32,6 @@
       "stock": "78",
       "photo": "https://image.api.playstation.com/vulcan/img/rnd/202010/2614/Sy5e8DmeKIJVjlAGraPAJYkT.png"
     },
-  
     {
       "id": "5",
       "name": "Persona 5 Royal",
@@ -43,42 +39,63 @@
       "price": "189,99",
       "stock": "60",
       "photo": "https://image.api.playstation.com/vulcan/ap/rnd/202209/0202/OjPcc6QP2W8kImOhWSnzojn3.png"
+    },
+    {
+      "id": "3029",
+      "name": "teste",
+      "platform": "5",
+      "price": "5",
+      "stock": "10",
+      "photo": "5"
+    },
+    {
+      "id": "b5e0",
+      "name": "tqtwqtwqtwqtqw",
+      "platform": "foda-se",
+      "price": "wefwefwe",
+      "stock": "wegwegwegwe",
+      "photo": "qwdqwdqwdqwd"
+    },
+    {
+      "id": "6de7",
+      "name": "sad",
+      "platform": "ad",
+      "price": "adasd",
+      "stock": "sdaasddsa",
+      "photo": "dad"
     }
   ],
-  
-
-
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "ivete_sangalo",
       "password": "1234",
       "fullName": "Ivete Sangalo",
       "email": "ivete@example.com"
     },
     {
-      "id": 2,
+      "id": "2",
       "username": "paula_fernandes",
       "password": "1234",
       "fullName": "Paula Fernandes",
       "email": "paula@example.com"
     },
     {
-      "id": 3,
+      "id": "3",
       "username": "fatima_bernardes",
       "password": "1234",
       "fullName": "Fátima Bernardes",
       "email": "fatima@example.com"
     },
     {
-      "id": 4,
+      "id": "4",
       "username": "roberto_carlos",
       "password": "1234",
       "fullName": "Roberto Carlos",
       "email": "roberto@example.com"
     },
     {
-      "id": 5,
+      "id": "5",
       "username": "carlos_alberto",
       "password": "1234",
       "fullName": "Carlos Alberto",
