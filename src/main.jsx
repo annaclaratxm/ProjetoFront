@@ -8,6 +8,7 @@ import LoginComponent from './components/Login/loginComponent.jsx';
 import Home from './components/Home/Home.jsx';
 import CreateServices from './components/CrudServices/CreateServices.jsx';
 import CreateOrEditProduct from './components/CrudServices/CreateOrEditServices.jsx';
+import CreateOrEditUsers from './components/CrudUsers/CreateOrEditUsers.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,11 +33,19 @@ const router = createBrowserRouter([
       },
       {
         path: 'services/create',
-        element: <CreateOrEditProduct />, // Create product
+        element: <CreateOrEditProduct />,
       },
       {
         path: 'services/edit/:id',
-        element: <CreateOrEditProduct />, // Edit product
+        element: <CreateOrEditProduct />, 
+      },
+      {
+        path: 'users/create',
+        element: <CreateOrEditUsers/>
+      },
+      {
+        path: 'users/edit/:id',
+        element: <CreateOrEditUsers/>
       }
     ],
   },

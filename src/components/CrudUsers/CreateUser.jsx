@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { FiTrash2 } from "react-icons/fi";
+import { useNavigate } from 'react-router-dom';
 import './CreateUser.css';
 
 export default function CreateUser() {
   const [usuarios, setUsuarios] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchUsuarios = async () => {
@@ -31,6 +33,14 @@ export default function CreateUser() {
     }
   };
 
+    const handleCreateUser = () => {
+      navigate('/app/users/create');
+    };
+
+    const handleEditUser = (id) => {
+      navigate(`/app/users/edit/${id}`)
+    };
+
   const classe = {
     CreateUser: "create-user",
     TabelaCrudUser: "crud-user-table",
@@ -40,6 +50,7 @@ export default function CreateUser() {
   return (
     <div className={classe.CreateUser}>
       <h2>Usuários do Sistema</h2>
+      <button className={classe.createButton} onClick={handleCreateUser}>Criar Novo Serviço</button>
       <table className={classe.TabelaCrudUser}>
         <thead>
           <tr>
@@ -56,7 +67,7 @@ export default function CreateUser() {
               <td>{usuario.fullName}</td>
               <td>{usuario.email}</td>
               <td className={classe.actions}>
-                <button onClick={() => editarUsuario(usuario.id)}>
+                <button onClick={() => handleEditUser(usuario.id)}>
                   Editar
                 </button>
                 <button onClick={() => confirmarExclusao(usuario.id)}>
