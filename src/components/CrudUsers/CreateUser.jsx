@@ -21,36 +21,47 @@ export default function CreateUser() {
     fetchUsuarios();
   }, []);
 
-  const editarUsuario = (id) => {
-    console.log("Editar usuário com ID:", id);
-  };
+  const confirmarExclusao = async (id) => {
+    if (window.confirm("Tem certeza que deseja excluir este usário?")) {
+      try {
+        const response = await fetch(`http://localhost:3000/users/${id}`, {
+          method: 'DELETE',
+        });
 
-  const confirmarExclusao = (id) => {
-    if (window.confirm("Tem certeza que deseja excluir este usuário?")) {
-      const novosUsuarios = usuarios.filter((usuario) => usuario.id !== id);
-      setUsuarios(novosUsuarios);
-      console.log("Usuário com ID", id, "foi excluído.");
+        if (response.ok) {
+          const novosUsuarios = usuarios.filter((user) => user.id !== id);
+          setUsuarios(novosUsuarios);
+          console.log("Usuário com ID", id, "foi excluído.");
+        } else {
+          console.error('Erro ao excluir usuário:', response.statusText);
+        }
+      } catch (error) {
+        console.error('Erro ao excluir usuário:', error);
+      }
     }
   };
 
-    const handleCreateUser = () => {
-      navigate('/app/users/create');
-    };
+  const handleCreateUser = () => {
+    navigate('/app/users/create');
+  };
 
-    const handleEditUser = (id) => {
-      navigate(`/app/users/edit/${id}`)
-    };
+  const handleEditUser = (id) => {
+    navigate(`/app/users/edit/${id}`)
+  };
 
   const classe = {
     CreateUser: "create-user",
     TabelaCrudUser: "crud-user-table",
     actions: "user-actions",
+    createButton: "create-button",
   };
 
   return (
     <div className={classe.CreateUser}>
       <h2>Usuários do Sistema</h2>
-      <button className={classe.createButton} onClick={handleCreateUser}>Criar Novo Serviço</button>
+      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <button className={classe.createButton} onClick={handleCreateUser}>Criar Novo Usuário</button>
+      </div>
       <table className={classe.TabelaCrudUser}>
         <thead>
           <tr>

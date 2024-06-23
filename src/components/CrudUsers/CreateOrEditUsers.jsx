@@ -59,11 +59,11 @@ export default function CreateOrEditUsers() {
         <label>Nome de usuário:</label>
         <input name="username" type="text" value={currentUser.username} onChange={(e) => setCurrentUser({ ...currentUser, username: e.target.value })} required />
         <label>Senha:</label>
-        <input name="password" type="text" value={currentUser.password} onChange={(e) => setCurrentUser({ ...currentUser, password: e.target.value })} required />
+        <input name="password" type="password" value={currentUser.password} onChange={(e) => setCurrentUser({ ...currentUser, password: e.target.value })} required />
         <label>Nome completo:</label>
         <input name="fullName" type="text" value={currentUser.fullName} onChange={(e) => setCurrentUser({ ...currentUser, fullName: e.target.value })} required />
         <label>E-mail:</label>
-        <input name="email" type="text" value={currentUser.email} onChange={(e) => setCurrentUser({ ...currentUser, email: e.target.value })} required />       
+        <input name="email" type="email" value={currentUser.email} onChange={(e) => setCurrentUser({ ...currentUser, email: e.target.value })} required />      
         <button type="submit">{isEditing ? 'Salvar Alterações' : 'Salvar'}</button>
         <button type="button" onClick={() => navigate('/app/users')}>Cancelar</button>
       </form>

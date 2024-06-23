@@ -5,11 +5,12 @@
     width: 100%;
     background-color: #C9C5BB;
     z-index: 1000;
-    
+    display: flex;
+    align-items: center;
 }
 
 .navbar-text {
-    font-size: 20px;
+    font-size: 30px;
     padding-right: 5px;
     cursor: auto;
     padding-left: 15px;
@@ -18,6 +19,8 @@
 .navbar-items {
     padding: 0px 5px;
     font-size: 16px;
+
+    align-items: center;
 }
 
 .navbar-items:hover {

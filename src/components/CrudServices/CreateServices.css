@@ -1,6 +1,6 @@
 .create-service {
     font-family: Arial, sans-serif;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     margin-top: 50px;
     padding: 20px;
@@ -16,7 +16,7 @@
   .crud-service-table th,
   .crud-service-table td {
     border: 1px solid #ddd;
-    padding: 12px;
+    padding: 18px;
     text-align: left;
   }
   
@@ -96,6 +96,7 @@
   }
   
   .confirmation-dialog button:last-child {
+    padding: 8px 33px;
     background-color: #f44336;
   }
   
@@ -126,8 +127,8 @@
   font-weight: bold;
 }
 
-.create-service input[type="text"] {
-  width: calc(100% - 24px); /* Desconta o padding dos inputs */
+.create-service input {
+  width: calc(100% - 24px);
   padding: 8px;
   font-size: 16px;
   border: 1px solid #d9f5d9;
@@ -164,4 +165,14 @@
 .create-service button:disabled {
   background-color: #1bac08;
   cursor: not-allowed;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+  appearance: textfield;
 }

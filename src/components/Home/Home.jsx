@@ -1,10 +1,42 @@
-import React from "react";
 import "./style.css";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                const response = await fetch("http://localhost:3000/products");
+                const data = await response.json(); // Correctly call json() as a method
+                setProducts(data.slice(0, 3)); // Slice the data after converting to JSON
+            } catch (error) {
+                console.error("Erro ao buscar produtos:", error);
+            }
+        };
+
+        fetchProducts();
+    }, []);
+
     return (
         <div className="home-div">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quidem sint magnam odio nostrum atque repudiandae ullam dolores, et, error quod nulla deserunt natus. Ducimus laborum sequi voluptatum sed magnam!</p>
+
+            <section className="games-section" id="games">
+                <h2>Catálogo</h2>
+                <div className="games-gallery">
+                    {products.map((product) => (
+                        <div className="game-card" key={product.id}>
+                            <div className="product-image-container">
+                                <Link to={`/app/services`}>
+                                    <img src={product.photo} className="product-image" alt={product.name} />
+                                </Link>
+                            </div>
+                            <h3>{product.name}</h3>
+                        </div>
+                    ))}
+                </div>
+            </section>
         </div>
     )
 }

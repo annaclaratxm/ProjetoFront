@@ -13,9 +13,9 @@ export default function ProductList() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("../../../data/db.json");
+        const response = await fetch("http://localhost:3000/products");
         const data = await response.json();
-        setProducts(data.products);
+        setProducts(data);
       } catch (error) {
         console.error("Erro ao buscar produtos:", error);
       }
@@ -24,11 +24,23 @@ export default function ProductList() {
     fetchProducts();
   }, []);
 
-  const confirmarExclusao = (id) => {
+  const confirmarExclusao = async (id) => {
     if (window.confirm("Tem certeza que deseja excluir este produto?")) {
-      const novosProdutos = products.filter((product) => product.id !== id);
-      setProducts(novosProdutos);
-      console.log("Produto com ID", id, "foi excluído.");
+      try {
+        const response = await fetch(`http://localhost:3000/products/${id}`, {
+          method: 'DELETE',
+        });
+
+        if (response.ok) {
+          const novosProdutos = products.filter((product) => product.id !== id);
+          setProducts(novosProdutos);
+          console.log("Produto com ID", id, "foi excluído.");
+        } else {
+          console.error('Erro ao excluir produto:', response.statusText);
+        }
+      } catch (error) {
+        console.error('Erro ao excluir produto:', error);
+      }
     }
   };
 
@@ -58,7 +70,9 @@ export default function ProductList() {
   return (
     <div className={classe.ProductList}>
       <h2>Lista de Produtos</h2>
-      <button className={classe.createButton} onClick={handleCreateProduct}>Criar Novo Serviço</button>
+      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <button className={classe.createButton} onClick={handleCreateProduct}>Criar Novo Produto</button>
+      </div>
       <table className={classe.TabelaCrudProduct}>
         <thead>
           <tr>

@@ -42,6 +42,26 @@
     margin-right: 5px;
     transition: background-color 0.3s ease;
   }
+
+  .create-user input {
+    width: calc(100% - 24px); /* Desconta o padding dos inputs */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #d9f5d9;
+    border-radius: 4px;
+  }
+
+  .create-button {
+    background-color: #007bff; /* Azul */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+  }
   
   .user-actions button:hover {
     background-color: #45a049;

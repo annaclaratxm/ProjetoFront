@@ -134,6 +134,14 @@
   border-radius: 4px;
 }
 
+.create-service input[type="text"] {
+  width: calc(100% - 24px); /* Desconta o padding dos inputs */
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #d9f5d9;
+  border-radius: 4px;
+}
+
 .create-service button {
   padding: 10px 20px;
   font-size: 16px;

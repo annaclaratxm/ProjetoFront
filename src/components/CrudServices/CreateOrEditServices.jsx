@@ -62,7 +62,7 @@ export default function CreateOrEditProduct() {
         <label>Modelo/Plataforma:</label>
         <input name="platform" type="text" value={currentProduct.platform} onChange={(e) => setCurrentProduct({ ...currentProduct, platform: e.target.value })} required />
         <label>Preço:</label>
-        <input name="price" type="text" value={currentProduct.price} onChange={(e) => setCurrentProduct({ ...currentProduct, price: e.target.value })} required />
+        <input name="price" type="number" value={currentProduct.price} onChange={(e) => setCurrentProduct({ ...currentProduct, price: e.target.value })} required />
         <label>Estoque:</label>
         <input name="stock" type="text" value={currentProduct.stock} onChange={(e) => setCurrentProduct({ ...currentProduct, stock: e.target.value })} required />
         <label>Foto URL:</label>

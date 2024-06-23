@@ -5,7 +5,7 @@
       "name": "God Of War - Ragnarok",
       "platform": "PS5 e PS4",
       "price": "289,99",
-      "stock": "60",
+      "stock": "59",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh7TL2LD07JO4Am9_xwy7FaYxZSP6-uubRlw&s"
     },
     {
@@ -41,37 +41,12 @@
       "photo": "https://www.adrenaline.com.br/wp-content/uploads/2023/07/persona-5-royal-capa.jpg"
     },
     {
-      "id": "3029",
-      "name": "teste",
-      "platform": "5",
-      "price": "5",
-      "stock": "10",
-      "photo": "5"
-    },
-    {
-      "id": "b5e0",
-      "name": "tqtwqtwqtwqtqw",
-      "platform": "foda-se",
-      "price": "wefwefwe",
-      "stock": "wegwegwegwe",
-      "photo": "qwdqwdqwdqwd"
-    },
-    {
-      "id": "6de7",
-      "name": "sad",
-      "platform": "ad",
-      "price": "adasd",
-      "stock": "sdaasddsa",
-      "photo": "dad"
-    },
-    {
-      "id": "658d",
-      "name": "cocozinho",
-      "platform": "butico",
-      "price": "nighuel",
-      "stock": "kratos",
-      "photo": "atreus"
-    }
+      "id": "6",
+      "name": "The Last of Us Part II",
+      "platform": "PS5",
+      "price": "199,99",
+      "stock": "70",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ
   ],
   "users": [
     {
