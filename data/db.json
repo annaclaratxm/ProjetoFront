@@ -39,14 +39,7 @@
       "price": "189,99",
       "stock": "60",
       "photo": "https://www.adrenaline.com.br/wp-content/uploads/2023/07/persona-5-royal-capa.jpg"
-    },
-    {
-      "id": "6",
-      "name": "The Last of Us Part II",
-      "platform": "PS5",
-      "price": "199,99",
-      "stock": "70",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ
+    }
   ],
   "users": [
     {

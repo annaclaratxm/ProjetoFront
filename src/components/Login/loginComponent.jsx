@@ -82,17 +82,13 @@ export default function LoginComponent() {
           <label>Senha:</label>
           <input
             type="password"
-            value={password}
+            value={password}k
             onChange={(e) => setPassword(e.target.value)}
             className={passwordError ? 'error-input' : ''}
           />
           {passwordError && <span className="error-message">Campo obrigatório</span>}
-          <a href="#" className="forgot-password-link">Esqueci minha senha</a>
           <input type="submit" value="Entrar" />
         </form>
-        <div className="login-buttons">
-          <button className="register-button">Registrar-se</button>
-        </div>
       </div>
       {showModal && (
         <div className="modal">
