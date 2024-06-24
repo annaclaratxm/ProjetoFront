@@ -9,8 +9,8 @@ export default function Home() {
         const fetchProducts = async () => {
             try {
                 const response = await fetch("http://localhost:3000/products");
-                const data = await response.json(); // Correctly call json() as a method
-                setProducts(data.slice(0, 3)); // Slice the data after converting to JSON
+                const data = await response.json();
+                setProducts(data.slice(0, 3)); 
             } catch (error) {
                 console.error("Erro ao buscar produtos:", error);
             }
