@@ -42,13 +42,13 @@ export default function CreateOrEditUsers() {
       });
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`Erro HTTP! status: ${response.status}`);
       }
 
       console.log("User saved", currentUser);
       navigate('/app/users');
     } catch (error) {
-      console.error("An error occurred while saving the user:", error);
+      console.error("Um erro ocorreu enquanto o usuário era salvo:", error);
     }
   };
 

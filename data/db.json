@@ -4,7 +4,7 @@
       "id": "1",
       "name": "God Of War - Ragnarok",
       "platform": "PS5 e PS4",
-      "price": "289,99",
+      "price": "249.99",
       "stock": "59",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh7TL2LD07JO4Am9_xwy7FaYxZSP6-uubRlw&s"
     },
@@ -12,7 +12,7 @@
       "id": "2",
       "name": "Spider-Man: Miles Morales",
       "platform": "PS5",
-      "price": "249,99",
+      "price": 240.89,
       "stock": "89",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLsz_M1TJETB9LkSUJKv0DfvYcftWUvKiHqQ&s"
     },
@@ -20,15 +20,15 @@
       "id": "3",
       "name": "Dragon Age: DreadWolf",
       "platform": "PS5",
-      "price": "299,99",
-      "stock": "80",
+      "price": 2,
+      "stock": "299.99",
       "photo": "https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2024/05/13/dragon-age-dreadwolf-1-vbhenl1rn78h.jpg"
     },
     {
       "id": "4",
       "name": "Bloodborne",
       "platform": "PS5",
-      "price": "179,99",
+      "price": 179.99,
       "stock": "78",
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdc9EbGYa7RtQrtkrxfbDjKLErr-R_HhwAfQ&s"
     },
@@ -36,7 +36,7 @@
       "id": "5",
       "name": "Persona 5 Royal",
       "platform": "PS5 e PS4",
-      "price": "189,99",
+      "price": 179.99,
       "stock": "60",
       "photo": "https://www.adrenaline.com.br/wp-content/uploads/2023/07/persona-5-royal-capa.jpg"
     }
@@ -47,7 +47,7 @@
       "username": "ivete_sangalo",
       "password": "1234",
       "fullName": "Ivete Sangalo",
-      "email": "ivete@example.com"
+      "email": "ivete@example.coma"
     },
     {
       "id": "2",

@@ -11,7 +11,7 @@ export default function CreateOrEditProduct() {
 
   useEffect(() => {
     if (id) {
-      // Fetch product by ID
+      // Fetch product por ID
       const fetchProduct = async () => {
         try {
           const response = await fetch(`http://localhost:3000/products/${id}`);
@@ -43,13 +43,13 @@ export default function CreateOrEditProduct() {
       });
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`Erro HTTP! status: ${response.status}`);
       }
 
-      console.log("Product saved", currentProduct);
+      console.log("Produto salvo!", currentProduct);
       navigate('/app/services');
     } catch (error) {
-      console.error("An error occurred while saving the product:", error);
+      console.error("Um erro ocorreu enquanto o produto era salvo:", error);
     }
   };
 
@@ -62,7 +62,16 @@ export default function CreateOrEditProduct() {
         <label>Modelo/Plataforma:</label>
         <input name="platform" type="text" value={currentProduct.platform} onChange={(e) => setCurrentProduct({ ...currentProduct, platform: e.target.value })} required />
         <label>Preço:</label>
-        <input name="price" type="number" value={currentProduct.price} onChange={(e) => setCurrentProduct({ ...currentProduct, price: e.target.value })} required />
+        <input
+          name="price"
+          type="number"
+          value={currentProduct.price}
+          onChange={(e) => setCurrentProduct({
+            ...currentProduct,
+            price: e.target.value === '' ? '' : Number(e.target.value)
+          })}
+          required
+        />
         <label>Estoque:</label>
         <input name="stock" type="text" value={currentProduct.stock} onChange={(e) => setCurrentProduct({ ...currentProduct, stock: e.target.value })} required />
         <label>Foto URL:</label>

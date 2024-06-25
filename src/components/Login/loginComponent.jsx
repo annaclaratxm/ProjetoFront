@@ -10,7 +10,7 @@ export default function LoginComponent() {
   const [showModal, setShowModal] = useState(false);
   const [usernameError, setUsernameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
-  const navigate = useNavigate(); // Use navigate hook to redirect
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchUsuarios = async () => {
@@ -49,7 +49,7 @@ export default function LoginComponent() {
         console.log("Usuário logado com sucesso: ", user);
         setErrorMessage('Usuário logado com sucesso.');
         setShowModal(true);
-        navigate('/app/home'); // Redirect to /app/home on successful login
+        navigate('/app/home');
       } else {
         setErrorMessage('Senha incorreta.');
         setShowModal(true);
@@ -82,7 +82,7 @@ export default function LoginComponent() {
           <label>Senha:</label>
           <input
             type="password"
-            value={password}k
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
             className={passwordError ? 'error-input' : ''}
           />
