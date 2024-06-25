@@ -52,7 +52,7 @@
   }
 
   .create-button {
-    background-color: #007bff; /* Azul */
+    background-color: #28a745; /* Azul */
     color: #fff;
     padding: 10px 20px;
     font-size: 16px;
@@ -72,7 +72,7 @@
   }
   
   .user-actions button:last-child:hover {
-    background-color: #d32f2f;
+    background-color: #f44336;
   }
   
   .user-actions button:last-child svg {
@@ -118,7 +118,7 @@
   }
   
   .confirmation-dialog button:last-child:hover {
-    background-color: #d32f2f;
+    background-color: #f44336;
   }
 
   .create-user form {
@@ -148,25 +148,25 @@
   }
   
   .create-user button[type="submit"] {
-    background-color: #007bff; /* Azul */
+    background-color: #28a745; /* Azul */
     color: #fff;
   }
   
   .create-user button[type="submit"]:hover {
-    background-color: #0056b3; /* Azul mais escuro */
+    background-color: #28a745; /* Azul mais escuro */
   }
   
   .create-user button[type="button"] {
-    background-color: #dc3545; /* Vermelho */
+    background-color: #f44336; /* Vermelho */
     color: #fff;
   }
   
   .create-user button[type="button"]:hover {
-    background-color: #c82333; /* Vermelho mais escuro */
+    background-color: #f44336; /* Vermelho mais escuro */
   }
   
   .create-user button:disabled {
-    background-color: #1bac08;
+    background-color: #28a745;
     cursor: not-allowed;
   }
   

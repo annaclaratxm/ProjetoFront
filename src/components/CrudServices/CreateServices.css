@@ -52,7 +52,7 @@
   }
   
   .service-actions button:last-child:hover {
-    background-color: #d32f2f;
+    background-color: #f44336;
   }
   
   /* Estilo do ícone de lixeira */
@@ -101,7 +101,7 @@
   }
   
   .confirmation-dialog button:last-child:hover {
-    background-color: #d32f2f;
+    background-color: #f44336;
   }
 
   img {
@@ -145,25 +145,26 @@
 }
 
 .create-service button[type="submit"] {
-  background-color: #007bff; /* Azul */
+  background-color: #45a049;
+  ; 
   color: #fff;
 }
 
 .create-service button[type="submit"]:hover {
-  background-color: #0056b3; /* Azul mais escuro */
+    background-color: #f44336; 
 }
 
 .create-service button[type="button"] {
-  background-color: #dc3545; /* Vermelho */
+  background-color: #f44336; /* Vermelho */
   color: #fff;
 }
 
 .create-service button[type="button"]:hover {
-  background-color: #c82333; /* Vermelho mais escuro */
+  background-color: #f44336; /* Vermelho mais escuro */
 }
 
 .create-service button:disabled {
-  background-color: #1bac08;
+  background-color: #45a049;
   cursor: not-allowed;
 }
 
