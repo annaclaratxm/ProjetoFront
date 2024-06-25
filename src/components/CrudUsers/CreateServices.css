@@ -152,24 +152,24 @@
 }
 
 .create-service button[type="submit"] {
-  background-color: #007bff; /* Azul */
+  background-color: #4caf50; /* Azul */
   color: #fff;
 }
 
 .create-service button[type="submit"]:hover {
-  background-color: #0056b3; /* Azul mais escuro */
+  background-color: #4caf50; /* Azul mais escuro */
 }
 
 .create-service button[type="button"] {
-  background-color: #dc3545; /* Vermelho */
+  background-color: #f44336; /* Vermelho */
   color: #fff;
 }
 
 .create-service button[type="button"]:hover {
-  background-color: #c82333; /* Vermelho mais escuro */
+  background-color: #f44336; /* Vermelho mais escuro */
 }
 
 .create-service button:disabled {
-  background-color: #1bac08;
+  background-color: #4caf50;
   cursor: not-allowed;
 }
